@@ -1,4 +1,3 @@
-# automl_streamlit
 # AutoML App 🚀
 
 Welcome to the AutoML App, a powerful tool for automated machine learning and data analysis. 
@@ -29,7 +28,10 @@ This app allows you to perform various tasks for automated machine learning and 
 
 Start by uploading your dataset. Supported file formats include CSV and Excel files. Make sure your data is clean and well-structured for analysis.
 
-![Upload Data Image](upload_image.png)
+![Upload Data Image](images/upload_01.png)
+![Upload Data Image](images/upload_02.png)
+![Upload Data Image](images/upload_03.png)
+![Upload Data Image](images/upload_04.png)
 
 You can find the 'Upload Data' page in the sidebar. Follow the steps to upload your dataset.
 
