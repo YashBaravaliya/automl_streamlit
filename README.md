@@ -29,9 +29,13 @@ This app allows you to perform various tasks for automated machine learning and 
 Start by uploading your dataset. Supported file formats include CSV and Excel files. Make sure your data is clean and well-structured for analysis.
 
 ![Upload Data Image](images/upload_01.png)
+***
 ![Upload Data Image](images/upload_02.png)
+***
 ![Upload Data Image](images/upload_03.png)
+***
 ![Upload Data Image](images/upload_04.png)
+***
 
 You can find the 'Upload Data' page in the sidebar. Follow the steps to upload your dataset.
 
@@ -43,10 +47,15 @@ After uploading your dataset, you can explore and visualize the data. View summa
 Feature engineering is essential for building accurate models. Handle missing values, encode categorical variables, and create new features.
 
 ![Feature Engineering Image](images/Feature_01.png)
+***
 ![Feature Engineering Image](images/Feature_02.png)
+***
 ![Feature Engineering Image](images/Feature_03.png)
+***
 ![Feature Engineering Image](images/Feature_04.png)
+***
 ![Feature Engineering Image](images/Feature_05.png)
+***
 
 Visit the 'Feature Engineering' page to preprocess your data for modeling.
 
@@ -55,8 +64,11 @@ Visit the 'Feature Engineering' page to preprocess your data for modeling.
 If you want to predict numeric values, use the Regression Model Maker. Select your target variable and choose from various regression algorithms.
 
 ![Regression Image](images/Regression_01.png)
+***
 ![Regression Image](images/Regression_02.png)
+***
 ![Regression Image](images/Regression_03.png)
+***
 
 Go to the 'Regression Model Maker' page to train and evaluate regression models.
 
@@ -65,6 +77,7 @@ Go to the 'Regression Model Maker' page to train and evaluate regression models.
 For classification tasks, the Classification Model Maker is your tool. Select the target class and pick an algorithm to create predictive models.
 
 ![Classification Image](images/Regression_04.png)
+***
 
 Head to the 'Classification Model Maker' page to work with classification models.
 
