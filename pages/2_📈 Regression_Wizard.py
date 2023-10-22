@@ -20,6 +20,11 @@ from config import get_data,get_cleaned_data,initialize_data
 
 # initialize_data()
 
+st.set_page_config(
+    page_title="Automl App",
+    page_icon="logo.ico" 
+)
+
 data = get_data()
 cleaned_data = get_cleaned_data()
 
