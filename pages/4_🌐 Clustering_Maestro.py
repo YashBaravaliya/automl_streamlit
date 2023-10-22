@@ -10,6 +10,11 @@ from config import get_cleaned_data,get_data
 # Load your data here
 # data = load_data()
 
+st.set_page_config(
+    page_title="Automl App",
+    page_icon="logo.ico" 
+)
+
 data = get_data()
 cleaned_data = get_cleaned_data()
 def clustering():
