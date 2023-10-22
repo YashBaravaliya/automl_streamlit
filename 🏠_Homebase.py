@@ -5,6 +5,11 @@ import os,sys
 script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)
 
+st.set_page_config(
+    page_title="Automl App",
+    page_icon="logo.ico" 
+)
+
 def main():
     st.title("🏠 Homebase")
     st.subheader("Welcome to the AutoML App")
