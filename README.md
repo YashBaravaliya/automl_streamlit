@@ -30,10 +30,13 @@ Start by uploading your dataset. Supported file formats include CSV and Excel fi
 
 ![Upload Data Image](images/upload_01.png)
 ***
+---
 ![Upload Data Image](images/upload_02.png)
 ***
+---
 ![Upload Data Image](images/upload_03.png)
 ***
+---
 ![Upload Data Image](images/upload_04.png)
 ***
 
@@ -48,12 +51,16 @@ Feature engineering is essential for building accurate models. Handle missing va
 
 ![Feature Engineering Image](images/Feature_01.png)
 ***
+---
 ![Feature Engineering Image](images/Feature_02.png)
 ***
+---
 ![Feature Engineering Image](images/Feature_03.png)
 ***
+---
 ![Feature Engineering Image](images/Feature_04.png)
 ***
+---
 ![Feature Engineering Image](images/Feature_05.png)
 ***
 
@@ -65,8 +72,10 @@ If you want to predict numeric values, use the Regression Model Maker. Select yo
 
 ![Regression Image](images/Regression_01.png)
 ***
+---
 ![Regression Image](images/Regression_02.png)
 ***
+---
 ![Regression Image](images/Regression_03.png)
 ***
 
@@ -86,7 +95,11 @@ Head to the 'Classification Model Maker' page to work with classification models
 Clustering helps discover patterns in your data. Select a clustering algorithm and visualize your data clusters.
 
 ![Clustering Image](images/Clustering.png)
+***
+---
 ![Clustering Image](images/Clustering_02.png)
+***
+---
 ![Clustering Image](images/Clustering_03.png)
 
 Use the 'Clustering Model Maker' page to perform clustering analysis on your dataset.
