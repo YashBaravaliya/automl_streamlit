@@ -42,7 +42,11 @@ After uploading your dataset, you can explore and visualize the data. View summa
 
 Feature engineering is essential for building accurate models. Handle missing values, encode categorical variables, and create new features.
 
-![Feature Engineering Image](feature_engineering_image.png)
+![Feature Engineering Image](images/Feature_01.png)
+![Feature Engineering Image](images/Feature_02.png)
+![Feature Engineering Image](images/Feature_03.png)
+![Feature Engineering Image](images/Feature_04.png)
+![Feature Engineering Image](images/Feature_05.png)
 
 Visit the 'Feature Engineering' page to preprocess your data for modeling.
 
@@ -50,7 +54,9 @@ Visit the 'Feature Engineering' page to preprocess your data for modeling.
 
 If you want to predict numeric values, use the Regression Model Maker. Select your target variable and choose from various regression algorithms.
 
-![Regression Image](regression_image.png)
+![Regression Image](images/Regression_01.png)
+![Regression Image](images/Regression_02.png)
+![Regression Image](images/Regression_03.png)
 
 Go to the 'Regression Model Maker' page to train and evaluate regression models.
 
@@ -58,7 +64,7 @@ Go to the 'Regression Model Maker' page to train and evaluate regression models.
 
 For classification tasks, the Classification Model Maker is your tool. Select the target class and pick an algorithm to create predictive models.
 
-![Classification Image](classification_image.png)
+![Classification Image](images/Regression_04.png)
 
 Head to the 'Classification Model Maker' page to work with classification models.
 
@@ -66,6 +72,8 @@ Head to the 'Classification Model Maker' page to work with classification models
 
 Clustering helps discover patterns in your data. Select a clustering algorithm and visualize your data clusters.
 
-![Clustering Image](clustering_image.png)
+![Clustering Image](images/Clustering.png)
+![Clustering Image](images/Clustering_02.png)
+![Clustering Image](images/Clustering_03.png)
 
 Use the 'Clustering Model Maker' page to perform clustering analysis on your dataset.
