@@ -9,6 +9,12 @@ from streamlit_option_menu import option_menu
 from config import *
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
+
+st.set_page_config(
+    page_title="Automl App",
+    page_icon="logo.ico" 
+)
+
 def perform_eda(data):
     st.subheader("Exploratory Data Analysis 📊")
 
