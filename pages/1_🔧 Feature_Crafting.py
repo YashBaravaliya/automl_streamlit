@@ -9,6 +9,11 @@ from config import get_data, get_cleaned_data
 missing_value_technique = None
 missing_value_summary = None
 
+st.set_page_config(
+    page_title="Automl App",
+    page_icon="logo.ico" 
+)
+
 def perform_eda(data):
     st.subheader("Exploratory Data Analysis 📊")
 
