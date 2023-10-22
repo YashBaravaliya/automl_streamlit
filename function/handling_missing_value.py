@@ -38,59 +38,52 @@ def handling_missing_value(data,cleaned_data):
         if sidebar == "Missing Value Summary":
             missing_value_summary = st.selectbox("Missing Value Summary",["Oreignal_Data_Summary","Cleaned Data Summary"])
 
+            # Original Data Summary
+            if missing_value_summary == "Oreignal_Data_Summary":
+                perform_eda(data)
+                handle_missing_values(data)
+
+            # Cleaned Data Summary
+            elif missing_value_summary == "Cleaned Data Summary":
+                perform_eda(cleaned_data)
+                handle_missing_values(cleaned_data)
+
         elif sidebar == "Missing Value Technique":
-            missing_value_technique = st.selectbox("Handel Missing Values",['REMOVAL OF MISSING VALUES','IMPUTATION','FORWARD/BACKWARD FILL','PREDICTION MODELS'])
+            missing_value_technique = st.selectbox("Handel Missing Values",['REMOVAL OF MISSING VALUES','IMPUTATION','FORWARD/BACKWARD FILL'])
 
-        # Original Data Summary
-        if missing_value_summary == "Oreignal_Data_Summary":
-            perform_eda(data)
-            handle_missing_values(data)
+            #------------------ REMOVAL OF MISSING VALUES
 
-        # Cleaned Data Summary
-        elif missing_value_summary == "Cleaned Data Summary":
-            perform_eda(cleaned_data)
-            handle_missing_values(cleaned_data)
+            if missing_value_technique == "REMOVAL OF MISSING VALUES":
+                cleaned_data = drop_columns_missing(cleaned_data)
 
+            #------------------IMPUTATION 
 
+            if missing_value_technique == "IMPUTATION":
+                d_type = st.selectbox("Select Data Types", ["Number", "Object"])
+                
+                cleaned_data = impute_missing_values(cleaned_data, d_type)
 
-        #------------------ REMOVAL OF MISSING VALUES
+            #------------------FORWARD/BACKWARD FILL
 
-        if missing_value_technique == "REMOVAL OF MISSING VALUES":
-            cleaned_data = drop_columns_missing(cleaned_data)
+            if missing_value_technique == "FORWARD/BACKWARD FILL":
 
-        #------------------IMPUTATION 
+                # Get the list of columns with missing values in the DataFrame
+                missing_columns = cleaned_data.columns
 
-        if missing_value_technique == "IMPUTATION":
-            d_type = st.selectbox("Select Data Types", ["Number", "Object"])
-            
-            cleaned_data = impute_missing_values(cleaned_data, d_type)
+                # Allow user to select a column from the dropdown (selectbox) with missing values
+                selected_column = st.multiselect("Select a column with missing values", missing_columns)
 
-        #------------------FORWARD/BACKWARD FILL
+                # Allow user to select the method to fill missing values (forward fill or backward fill)
+                fill_method = st.radio("Select method to fill missing values", ('ffill', 'bfill'))
 
-        if missing_value_technique == "FORWARD/BACKWARD FILL":
+                if selected_column:
+                    if st.button(f"Perform {fill_method}"):
+                        df_filled = fillMissingValues(cleaned_data, selected_column, fill_method)
+                        st.write("DataFrame after filling missing values:")
+                        st.write(df_filled)
+                else:
+                    st.write("Please select a column with missing values.")
 
-            # Get the list of columns with missing values in the DataFrame
-            missing_columns = cleaned_data.columns
+            update_data(data, cleaned_data)
 
-            # Allow user to select a column from the dropdown (selectbox) with missing values
-            selected_column = st.multiselect("Select a column with missing values", missing_columns)
-
-            # Allow user to select the method to fill missing values (forward fill or backward fill)
-            fill_method = st.radio("Select method to fill missing values", ('ffill', 'bfill'))
-
-            if selected_column:
-                if st.button(f"Perform {fill_method}"):
-                    df_filled = fillMissingValues(cleaned_data, selected_column, fill_method)
-                    st.write("DataFrame after filling missing values:")
-                    st.write(df_filled)
-            else:
-                st.write("Please select a column with missing values.")
-
-        #--------------------------PREDICTION MODELS
-        if missing_value_technique=="PREDICTION MODELS":
-            model_name = st.selectbox("Choose Model Name", ["Linear Regression","Random Forest"])
-            st.info("work in progress")
-
-        update_data(data, cleaned_data)
-
-    # st.session_state["cleaned_data"] = cleaned_data
+        # st.session_state["cleaned_data"] = cleaned_data
