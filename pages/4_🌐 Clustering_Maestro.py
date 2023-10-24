@@ -69,7 +69,7 @@ def clustering():
     st.write(labels)
 
     # Download the clustering model in pickle format to a custom path
-    model_filename = f"clustering_model_model.pkl"
+    model_filename = f"{clustering_model}_model.pkl"
 
     
     # Offer the downloaded model
