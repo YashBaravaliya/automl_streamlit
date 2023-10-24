@@ -73,7 +73,7 @@ def clustering():
     st.download_button(
         label="Download Model",
         data=model_bytes,
-        file_name=f"{classification_model}_model.pkl",
+        file_name=f"{clustering_model}_model.pkl",
         key="download_model",
         mime='application/octet-stream',  # Use the appropriate MIME type for your model file
         # Provide a success message to the user
