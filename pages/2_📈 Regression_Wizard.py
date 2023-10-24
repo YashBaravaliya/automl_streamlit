@@ -174,15 +174,20 @@ def regression():
             st.pyplot(plt)
 
     # Download the trained model in pickle format to a custom path
-    custom_path = st.text_input("Enter custom path to save the model (optional)")
-    if st.button("Download Model"):
-        model_filename = f"{regression_model}_model.pkl"
-        if custom_path:
-            custom_path = os.path.normpath(custom_path)
-            model_filename = os.path.join(custom_path, model_filename)
-        with open(model_filename, "wb") as model_file:
-            pickle.dump(model, model_file)
-        st.success("Model save Successfully")
+    model_filename = f"{regression_model}_model.pkl"
+
+    
+    # Offer the downloaded model
+    with open(model_filename, "rb") as model_file:
+        model_bytes = model_file.read()
+    st.download_button(
+        label="Download Model",
+        data=model_bytes,
+        file_name=model_filename,
+        key="download_model",
+        mime='application/octet-stream',  # Use the appropriate MIME type for your model file
+        # Provide a success message to the user
+    )
 
 if __name__ == "__main__":
     regression()
