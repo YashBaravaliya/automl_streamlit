@@ -116,16 +116,11 @@ def classification():
         st.text(classification_report_train)
 
     # Download the trained model in pickle format to a custom path
-    model_filename = f"{classification_model}_model.pkl"
-
-    
-    # Offer the downloaded model
-    with open(model_filename, "rb") as model_file:
-        model_bytes = model_file.read()
+    model_bytes = pickle.dumps(model)
     st.download_button(
         label="Download Model",
         data=model_bytes,
-        file_name=model_filename,
+        file_name=f"{classification_model}_model.pkl",
         key="download_model",
         mime='application/octet-stream',  # Use the appropriate MIME type for your model file
         # Provide a success message to the user
