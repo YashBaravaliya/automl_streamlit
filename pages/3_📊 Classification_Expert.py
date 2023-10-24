@@ -116,7 +116,7 @@ def classification():
         st.text(classification_report_train)
 
     # Download the trained model in pickle format to a custom path
-    model_filename = f"{Classification_model}_model.pkl"
+    model_filename = f"Classification_model_model.pkl"
 
     
     # Offer the downloaded model
